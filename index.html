@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Formulario</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+	<!-- BOOTSTRAP -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	<div class="contenedor_formulario container">
+		<h2>FORMULARIO</h2>
+		<form action="#" method="#">
+		<div class="row justify-content-center col-md-12">
+			<div class="input-group col-lg-3 mb-5">
+		      <div class="input-group-prepend">
+		        <span class="input-group-text caja-iconos"><i class="fas fa-id-card"></i></span>
+		      </div>
+		      <input type="number" class="form-control" placeholder="Codigo" name="codigo" >
+		    </div>
+		
+			<div class="input-group col-lg-3 mb-5">
+		      <div class="input-group-prepend">
+		        <span class="input-group-text caja-iconos"><i class="fas fa-user-edit"></i></span>
+		      </div>
+		      <input type="text" class="form-control" placeholder="Nombres"  name="nombres" >
+		    </div>
+
+		    <div class="input-group col-lg-3 mb-5">
+		      <div class="input-group-prepend">
+		        <span class="input-group-text caja-iconos"><i class="fas fa-user-tie"></i></span>
+		      </div>
+		      <input type="email" class="form-control" placeholder="Email"  name="email" >
+		    </div>
+		</div>
+
+		<div class="row justify-content-center col-md-12">
+			<div class="input-group col-lg-3 mb-5">
+		      <div class="input-group-prepend">
+		        <span class="input-group-text caja-iconos"><i class="fas fa-mobile-alt"></i></span>
+		      </div>
+		      <input type="number" class="form-control" placeholder="Telefono Celular" name="celular" maxlength="10">
+		    </div>
+		
+			<div class="input-group col-lg-3 mb-5">
+		      <div class="input-group-prepend">
+		        <span class="input-group-text caja-iconos"><i class="fas fa-phone"></i></span>
+		      </div>
+		      <input type="number" class="form-control" placeholder="Telefono Fijo"  name="fijo" maxlength="10">
+		    </div>
+
+		    <div class="input-group col-lg-3 mb-5">
+		      <div class="input-group-prepend">
+		        <span class="input-group-text caja-iconos"><i class="fas fa-map-marker-alt"></i></span>
+		      </div>
+		      <input type="text" class="form-control" placeholder="Direccion"  name="direccion">
+		    </div>
+		</div>
+
+		<div class="row justify-content-center col-md-12">
+			<div class="input-group col-lg-3 mb-5">
+		      <div class="input-group-prepend">
+		        <span class="input-group-text caja-iconos"><i class="fas fa-flag-usa"></i></span>
+		      </div>
+		      <input type="text" class="form-control" placeholder="Pais" name="pais">
+		    </div>
+		
+			<div class="input-group col-lg-3 mb-5">
+		      <div class="input-group-prepend">
+		        <span class="input-group-text caja-iconos"><i class="fas fa-flag"></i></span>
+		      </div>
+		      <input type="text" class="form-control" placeholder="Departamento"  name="dpto">
+		    </div>
+
+		    <div class="input-group col-lg-3 mb-5">
+		      <div class="input-group-prepend">
+		        <span class="input-group-text caja-iconos"><i class="fas fa-building"></i></span>
+		      </div>
+		      <input type="text" class="form-control" placeholder="Ciudad"  name="ciudad">
+		    </div>
+		</div>
+
+		<div class="col-md-12">
+			<div class="row justify-content-center">
+				<button class="btn btn-info col-6 col-lg-2" id="btn_guardar" onclick="validarDatos();">Enviar</button>
+			</div>
+		</div>
+
+		</form>
+	</div>
+
+	<script type="text/javascript">
+
+		function validarDatos() {
+			event.preventDefault();
+			let campo= document.querySelectorAll('input');
+
+			for (var i = 0; i < campo.length; i++) {
+				if (campo[i].value == '') {
+				campo[i].style.borderColor="red"
+				alert('El campo no debe ir vacio');	
+				return false;
+				}else{
+				campo[i].style.borderColor="green"	
+				}
+			}
+		}
+
+	</script>
+	
+</body>
+</html>
