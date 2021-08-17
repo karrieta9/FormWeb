@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
     body{
-        background-color: #f7f4f4;
+        background-color: red;
         font-family: 'Raleway', sans-serif;
     }
     .contenedor_formulario{
